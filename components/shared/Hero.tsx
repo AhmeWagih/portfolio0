@@ -43,7 +43,7 @@ export default function Hero() {
     );
 
     return () => clearTimeout(timeout);
-  }, [typedText, currentWordIndex, isDeleting, words]);
+  }, [typedText, currentWordIndex, isDeleting]);
 
   const scrollToProjects = () => {
     document.querySelector('#projects')?.scrollIntoView({

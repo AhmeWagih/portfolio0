@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { useRef, useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { Linkedin, Github, Mail, Send } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useRef, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { Linkedin, Github, Mail, Send } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
@@ -15,20 +15,24 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "sonner";
-import emailjs from "@emailjs/browser";
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { toast } from 'sonner';
+import emailjs from '@emailjs/browser';
 
 // Initialize EmailJS with the public key
-emailjs.init("pKkiEzAOSEuCBDouv");
+emailjs.init('pKkiEzAOSEuCBDouv');
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  email: z.string().email({ message: "Please enter a valid email address." }),
-  subject: z.string().min(5, { message: "Subject must be at least 5 characters." }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
+  name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
+  email: z.string().email({ message: 'Please enter a valid email address.' }),
+  subject: z
+    .string()
+    .min(5, { message: 'Subject must be at least 5 characters.' }),
+  message: z
+    .string()
+    .min(10, { message: 'Message must be at least 10 characters.' }),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -45,39 +49,36 @@ export default function Contact() {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
     },
   });
 
-  function onSubmit(data: FormValues) {
+  function onSubmit() {
     setIsSubmitting(true);
-    emailjs
-      .sendForm(
-        "service_detkgiv", 
-        "template_8sul8xn", 
-        formRef.current
-      )
-      .then(
-        () => {
-          toast.success('Message sent successfully!', {
-            style: { color: 'black', backgroundColor: 'white' },
-          });
-          form.reset();
-          setIsSubmitting(false);
-        },
-        (error) => {
-          toast.error('Failed to send message. Please try again.', {
-            style: { color: 'black', backgroundColor: 'white' },
-          });
-          console.error(error);
-          setIsSubmitting(false);
-        }
-      );
+    // if (formRef.current) {
+    //   emailjs
+    //     .sendForm('service_detkgiv', 'template_8sul8xn', formRef.current)
+    //     .then(
+    //       () => {
+    //         toast.success('Message sent successfully!', {
+    //           style: { color: 'black', backgroundColor: 'white' },
+    //         });
+    //         form.reset();
+    //         setIsSubmitting(false);
+    //       },
+    //       (error) => {
+    //         toast.error('Failed to send message. Please try again.', {
+    //           style: { color: 'black', backgroundColor: 'white' },
+    //         });
+    //         console.error(error);
+    //         setIsSubmitting(false);
+    //       }
+    //     );
+    // }
   }
-
   return (
     <section id="contact" className="py-20" ref={ref}>
       <div className="container mx-auto">
@@ -90,7 +91,8 @@ export default function Contact() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
           <div className="h-1 w-20 bg-primary rounded"></div>
           <p className="mt-6 text-center text-muted-foreground max-w-2xl">
-            Have a project in mind or want to chat? Feel free to reach out through the form below or connect with me on social media.
+            Have a project in mind or want to chat? Feel free to reach out
+            through the form below or connect with me on social media.
           </p>
         </motion.div>
 
@@ -102,7 +104,11 @@ export default function Contact() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <Form {...form}>
-              <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form
+                ref={formRef}
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-6"
+              >
                 <FormField
                   control={form.control}
                   name="name"
@@ -149,17 +155,21 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel>Message</FormLabel>
                       <FormControl>
-                        <Textarea 
-                          placeholder="Your message" 
-                          className="min-h-[150px] resize-none" 
-                          {...field} 
+                        <Textarea
+                          placeholder="Your message"
+                          className="min-h-[150px] resize-none"
+                          {...field}
                         />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="w-full" disabled={isSubmitting}>
+                <Button
+                  type="submit"
+                  className="w-full"
+                  disabled={isSubmitting}
+                >
                   {isSubmitting ? (
                     <>
                       <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent"></div>
@@ -187,7 +197,8 @@ export default function Contact() {
               <div>
                 <h3 className="text-2xl font-bold mb-4">Contact Information</h3>
                 <p className="text-muted-foreground">
-                  Feel free to reach out for collaborations, questions, or just to say hello!
+                  Feel free to reach out for collaborations, questions, or just
+                  to say hello!
                 </p>
               </div>
 
@@ -198,7 +209,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-medium">Email</p>
-                    <a 
+                    <a
                       href="mailto:ahmedwagih087@gmail"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
@@ -213,9 +224,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-medium">LinkedIn</p>
-                    <a 
-                      href="https://linkedin.com/in/ahmedwagih02" 
-                      target="_blank" 
+                    <a
+                      href="https://linkedin.com/in/ahmedwagih02"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
@@ -230,9 +241,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-medium">GitHub</p>
-                    <a 
-                      href="https://github.com/AhmeWagih" 
-                      target="_blank" 
+                    <a
+                      href="https://github.com/AhmeWagih"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
@@ -245,8 +256,12 @@ export default function Contact() {
               <div>
                 <h3 className="text-xl font-bold mb-2">Current Status</h3>
                 <p className="text-muted-foreground">
-                  I&apos;m currently <span className="text-primary font-medium">available for freelance work</span> and
-                  open to new opportunities. Let&apos;s create something amazing together!
+                  I&apos;m currently{' '}
+                  <span className="text-primary font-medium">
+                    available for freelance work
+                  </span>{' '}
+                  and open to new opportunities. Let&apos;s create something
+                  amazing together!
                 </p>
               </div>
             </div>
