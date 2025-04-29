@@ -58,26 +58,26 @@ export default function Contact() {
 
   function onSubmit() {
     setIsSubmitting(true);
-    // if (formRef.current) {
-    //   emailjs
-    //     .sendForm('service_detkgiv', 'template_8sul8xn', formRef.current)
-    //     .then(
-    //       () => {
-    //         toast.success('Message sent successfully!', {
-    //           style: { color: 'black', backgroundColor: 'white' },
-    //         });
-    //         form.reset();
-    //         setIsSubmitting(false);
-    //       },
-    //       (error) => {
-    //         toast.error('Failed to send message. Please try again.', {
-    //           style: { color: 'black', backgroundColor: 'white' },
-    //         });
-    //         console.error(error);
-    //         setIsSubmitting(false);
-    //       }
-    //     );
-    // }
+    if (formRef.current) {
+      emailjs
+        .sendForm('service_detkgiv', 'template_8sul8xn', formRef.current)
+        .then(
+          () => {
+            toast.success('Message sent successfully!', {
+              style: { color: 'black', backgroundColor: 'white' },
+            });
+            form.reset();
+            setIsSubmitting(false);
+          },
+          (error) => {
+            toast.error('Failed to send message. Please try again.', {
+              style: { color: 'black', backgroundColor: 'white' },
+            });
+            console.error(error);
+            setIsSubmitting(false);
+          }
+        );
+    }
   }
   return (
     <section id="contact" className="py-20" ref={ref}>

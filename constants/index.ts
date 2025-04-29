@@ -37,7 +37,13 @@ export const skills = {
   ],
 };
 
-export const categories = ["All", "Frontend", "Full Stack", "Mobile", "Backend"];
+export const categories = [
+  'All',
+  'Full Stack',
+  'Frontend',
+  'Backend',
+  'Mobile',
+];
 
 export const projects = [
   {
@@ -57,27 +63,28 @@ export const projects = [
     ],
     demoUrl: 'https://nasa-space-app-mauve.vercel.app',
     githubUrl: 'https://github.com/AhmeWagih/earth_simulator',
-    category: "Full Stack",
+    category: 'Full Stack',
   },
   {
     id: 2,
-    title: "Youtube Clone",
+    title: 'Youtube Clone',
     description:
       ' Developed a YouTube clone application using React and Tailwind CSS, integrating it with YouTube’s API to fetch and display videos, enabling users to search and watch videos seamlessly.',
     image: '/projects/youtubeclone.png',
     tags: ['React', 'Tailwind CSS', 'Rapid API'],
     demoUrl: 'https://youtube-clone-eight-nu.vercel.app/',
     githubUrl: 'https://github.com/AhmeWagih/youtube-clone',
-    category: "Frontend",
+    category: 'Frontend',
   },
   {
     id: 3,
-    title: "Portfolio Website",
-    description: "A sleek, responsive portfolio website showcasing projects and skills.",
-    image: "/projects/portfolio.png",
-    tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    demoUrl: "https://ahmed-wagih-one.vercel.app/",
-    githubUrl: "https://github.com/AhmeWagih/my_portfolio",
-    category: "Frontend",
+    title: 'Portfolio Website',
+    description:
+      'A sleek, responsive portfolio website showcasing projects and skills.',
+    image: '/projects/portfolio.png',
+    tags: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
+    demoUrl: 'https://ahmed-wagih-one.vercel.app/',
+    githubUrl: 'https://github.com/AhmeWagih/my_portfolio',
+    category: 'Frontend',
   },
 ];
