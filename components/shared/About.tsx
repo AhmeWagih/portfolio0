@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -79,7 +79,7 @@ export default function About() {
             <div className="pt-4 flex flex-wrap gap-4">
               <Button asChild>
                 <a 
-                  href="/resume.pdf" 
+                  href="/AhmedWagih.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
