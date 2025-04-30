@@ -2,7 +2,7 @@
 
 A sleek and responsive portfolio website built with Next.js, Tailwind CSS, and Framer Motion. Features a dark/light mode toggle, smooth animations, and a clean, modern design.
 
-![Portfolio Preview](https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg)
+![Portfolio Preview](https://github.com/AhmeWagih/portfolio0/assets/113104074/2412a3c6-ede7-404f-a122-17c04d2f15da)
 
 ## Features
 
@@ -25,7 +25,7 @@ A sleek and responsive portfolio website built with Next.js, Tailwind CSS, and F
 - [React Hook Form](https://react-hook-form.com/) - Form handling
 - [Zod](https://zod.dev/) - Form validation
 - [Lucide React](https://lucide.dev/) - Icons
-
+- [LottieFiles](https://lottiefiles.com/) - Animation
 ## Getting Started
 
 1. Clone the repository:
@@ -43,7 +43,7 @@ A sleek and responsive portfolio website built with Next.js, Tailwind CSS, and F
    npm run dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. Open [https://portfolio0-pearl.vercel.app/](https://portfolio0-pearl.vercel.app/) in your browser.
 
 ## Project Structure
 
@@ -52,7 +52,7 @@ A sleek and responsive portfolio website built with Next.js, Tailwind CSS, and F
 │   ├── layout.tsx      # Root layout
 │   └── page.tsx        # Home page
 ├── components/         # React components
-│   ├── providers/        # theme components
+│   ├── providers/        # Theme components
 │   ├── shared/      # Page sections
 │   └── ui/            # UI components
 ├── lib/               # Utility functions
@@ -62,8 +62,8 @@ A sleek and responsive portfolio website built with Next.js, Tailwind CSS, and F
 ## Customization
 
 1. Update personal information in `app/layout.tsx`
-2. Modify project data in `components/sections/projects.tsx`
-3. Edit skills in `components/sections/skills.tsx`
+2. Modify project data in `components/shared/projects.tsx`
+3. Edit skills in `components/shared/skills.tsx`
 4. Customize theme colors in `app/globals.css`
 
 ## Deployment
@@ -92,9 +92,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter)
+Ahmed Wagih - [@ahmedwagih02](https://www.linkedin.com/in/ahmedwagih02/)
 
-Project Link: [https://github.com/yourusername/portfolio](https://github.com/yourusername/portfolio)
+Project Link: [https://github.com/AhmeWagih/portfolio0](https://github.com/AhmeWagih/portfolio0)
 
 ## Acknowledgments
 
