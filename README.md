@@ -2,7 +2,7 @@
 
 A sleek and responsive portfolio website built with Next.js, Tailwind CSS, and Framer Motion. Features a dark/light mode toggle, smooth animations, and a clean, modern design.
 
-![Portfolio Preview](https://github.com/AhmeWagih/portfolio0/assets/113104074/2412a3c6-ede7-404f-a122-17c04d2f15da)
+![Portfolio Preview](https://github.com/AhmeWagih/portfolio0/blob/main/public/projects/port.png?raw=true)
 
 ## Features
 
