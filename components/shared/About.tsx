@@ -1,8 +1,7 @@
 "use client";
-
-// import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
 export default function About() {
@@ -32,7 +31,7 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.1 }}
           >
             <div className="relative h-full w-full overflow-hidden rounded-xl border-8 border-background shadow-xl">
-              <img src="/assets/about.jpeg" alt="" />
+              <Image src="/assets/about.jpeg" alt="About me image" width={1000} height={1000} />
             </div>
             <div className="absolute -bottom-6 -right-6 h-full w-full rounded-xl border-8 border-primary bg-primary/10 -z-10"></div>
           </motion.div>

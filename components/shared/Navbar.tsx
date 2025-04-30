@@ -20,7 +20,6 @@ export default function Navbar() {
     const handleScroll = () => {
       // Set navbar background when scrolled
       setScrolled(window.scrollY > 50);
-
       // Get current scroll position
       const scrollPosition = window.scrollY + 100;
 
@@ -127,14 +126,14 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Navigation Button */}
-            <div className="md:hidden flex items-center">
+            <div className="md:hidden flex items-center gap-1">
               <ModeToggle />
-              <Button
-                variant="ghost"
-                className="ml-2"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                {isOpen ? <X size={20} /> : <Menu size={20} />}
+              <Button variant="secondary" className='rounded-lg bg-primary/5 p-2 hover:bg-primary/10 dark:bg-primary/40 dark:hover:bg-primary/30' onClick={() => setIsOpen(!isOpen)}>
+                {isOpen ? (
+                  <X size={20} />
+                ) : (
+                  <Menu size={20} />
+                )}
               </Button>
             </div>
           </div>
