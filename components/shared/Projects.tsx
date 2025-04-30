@@ -25,8 +25,11 @@ import {
   PaginationNext,
   PaginationEllipsis,
 } from '@/components/ui/pagination';
-import Lottie from 'lottie-react';
-import FirstAnimated from '@/public/lottieFiles/second.json';
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+
+// import FirstAnimated from '@/public/lottieFiles/second.json';
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -90,7 +93,8 @@ export default function Projects() {
         {/* Project Grid */}
         {filteredProjects.length === 0 ? (
           <div className="text-center max-w-lg mx-auto">
-            <Lottie animationData={FirstAnimated}/>
+            <Lottie animationData={require('@/public/lottieFiles/second.json')} />
+
             <p className="text-lg text-muted-foreground">
               No projects found under the <strong>{activeCategory}</strong>{' '}
               category.

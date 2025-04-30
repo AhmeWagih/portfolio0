@@ -52,8 +52,8 @@ A sleek and responsive portfolio website built with Next.js, Tailwind CSS, and F
 │   ├── layout.tsx      # Root layout
 │   └── page.tsx        # Home page
 ├── components/         # React components
-│   ├── layout/        # Layout components
-│   ├── sections/      # Page sections
+│   ├── providers/        # theme components
+│   ├── shared/      # Page sections
 │   └── ui/            # UI components
 ├── lib/               # Utility functions
 └── public/            # Static assets

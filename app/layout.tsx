@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { ThemeProvider } from '@/components/providers/theme-provider';
-import Navbar from '@/components/shared/Navbar';
 import { Inter } from 'next/font/google';
 import Footer from '@/components/shared/Footer';
 import { Toaster } from 'sonner';
+import Navbar from '@/components/shared/Navbar';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -13,18 +13,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://yourportfolio.com',
-    title: 'Your Name | Personal Portfolio',
+    url: 'https://portfolio0-pearl.vercel.app/',
+    title: 'Ahmed Wagih | Personal Portfolio',
     description:
       'Software developer and designer showcasing projects and skills',
-    siteName: 'Your Name Portfolio',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Your Name | Personal Portfolio',
-    description:
-      'Software developer and designer showcasing projects and skills',
-    creator: '@yourhandle',
+    siteName: 'Ahmed Wagih',
   },
 };
 
