@@ -51,7 +51,7 @@ export default function Skills() {
 
   return (
     <section id="skills" className="py-20" ref={ref}>
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-7xl px-4">
         <motion.div
           className="flex flex-col items-center mb-12"
           initial={{ opacity: 0, y: 20 }}

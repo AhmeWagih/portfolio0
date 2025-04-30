@@ -13,7 +13,7 @@ export default function About() {
 
   return (
     <section id="about" className="py-20" ref={ref}>
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-7xl px-4">
         <motion.div
           className="flex flex-col items-center mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -32,14 +32,6 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.1 }}
           >
             <div className="relative h-full w-full overflow-hidden rounded-xl border-8 border-background shadow-xl">
-              {/* <Image
-                src="/assets/about.jpeg"
-                alt="Profile"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                priority
-              /> */}
               <img src="/assets/about.jpeg" alt="" />
             </div>
             <div className="absolute -bottom-6 -right-6 h-full w-full rounded-xl border-8 border-primary bg-primary/10 -z-10"></div>
@@ -52,7 +44,7 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <h3 className="text-2xl font-bold">
-              Hello! I&apos;m <span className="text-primary">Ahmed Wagih</span>, a passionate developer based in Location.
+              Hello! I&apos;m <span className="text-primary">Ahmed Wagih</span>, a passionate developer based in Egypt.
             </h3>
             
             <div className="space-y-4 text-muted-foreground">

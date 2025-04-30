@@ -1,29 +1,41 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { ChevronUp } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+import { ChevronUp } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import Image from 'next/image';
+import { useMediaQuery } from "react-responsive";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const isMobile = useMediaQuery({ maxWidth: 768 })
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
   return (
     <footer className="w-full border-t bg-background">
-      <div className="container mx-auto px-4 py-10 md:px-6 lg:px-8">
+      <div className="container mx-auto max-w-7xl px-4 py-10">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col items-center md:items-start">
-            <Link 
-              href="#home" 
+            <Link
+              href="#home"
               className="font-bold text-2xl text-primary hover:text-primary/80 transition"
             >
-              Ahmed Wagih
+              {isMobile ? (
+                <Image
+                  src="/mobileLogo.png"
+                  alt="Mobile Logo"
+                  width={50}
+                  height={40}
+                />
+              ) : (
+                <Image src="/logo.png" alt="Logo" width={200} height={64} />
+              )}
             </Link>
             <p className="mt-2 text-sm text-muted-foreground">
               Building digital experiences that matter
@@ -32,7 +44,11 @@ export default function Footer() {
 
           <div className="flex flex-col items-center md:items-end gap-4">
             <div className="flex items-center gap-4">
-              <Link href="https://github.com/AhmeWagih" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://github.com/AhmeWagih"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button variant="ghost" size="icon" aria-label="GitHub">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +66,11 @@ export default function Footer() {
                   </svg>
                 </Button>
               </Link>
-              <Link href="https://www.linkedin.com/in/ahmedwagih02" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://www.linkedin.com/in/ahmedwagih02"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button variant="ghost" size="icon" aria-label="LinkedIn">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -88,9 +108,9 @@ export default function Footer() {
               </Link> */}
             </div>
             <div>
-              <Button 
-                variant="ghost" 
-                size="icon" 
+              <Button
+                variant="ghost"
+                size="icon"
                 onClick={scrollToTop}
                 aria-label="Scroll to top"
                 className="rounded-full bg-primary/80 hover:bg-primary/60 transition-colors cursor-pointer"
@@ -100,7 +120,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        
+
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
           <p>© {currentYear} Ahmed Wagih. All rights reserved.</p>
         </div>
