@@ -9,11 +9,14 @@ import { motion } from 'framer-motion';
 import { ModeToggle } from '../providers/theme-toggle';
 import { navItems } from '@/constants';
 import Image from 'next/image';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [scrolled, setScrolled] = useState(false);
+  const isMobile = useMediaQuery({ maxWidth: 768 })
+
   useEffect(() => {
     const handleScroll = () => {
       // Set navbar background when scrolled
@@ -73,12 +76,16 @@ export default function Navbar() {
                 href="/"
                 className="font-bold text-2xl text-primary hover:text-primary/80 transition"
               >
-                <Image
-                  src="/MobileLogo.png"
-                  alt="Logo"
-                  width={80}
-                  height={40}
-                />
+                {isMobile ? (
+                  <Image
+                    src="/mobileLogo.png"
+                    alt="Mobile Logo"
+                    width={50}
+                    height={40}
+                  />
+                ) : (
+                  <Image src="/mobileLogo.png" alt="Logo" width={70} height={64} />
+                )}
               </Link>
             </div>
 
