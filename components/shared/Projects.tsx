@@ -122,7 +122,12 @@ export default function Projects() {
                     onClick={() =>
                       setCurrentPage((prev) => Math.max(prev - 1, 1))
                     }
-                    className={currentPage === 1 ? ' opacity-50' : ''}
+                    className={
+                      'cursor-pointer' +
+                      (currentPage === 1
+                        ? ' opacity-50 pointer-events-none'
+                        : '')
+                    }
                   />
                 </PaginationItem>
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map(
@@ -137,6 +142,7 @@ export default function Projects() {
                           <PaginationLink
                             isActive={page === currentPage}
                             onClick={() => setCurrentPage(page)}
+                            className="cursor-pointer"
                           >
                             {page}
                           </PaginationLink>
@@ -162,7 +168,12 @@ export default function Projects() {
                     onClick={() =>
                       setCurrentPage((prev) => Math.min(prev + 1, totalPages))
                     }
-                    className={currentPage === totalPages ? ' opacity-50' : ''}
+                    className={
+                      'cursor-pointer' +
+                      (currentPage === totalPages
+                        ? ' opacity-50 pointer-events-none'
+                        : '')
+                    }
                   />
                 </PaginationItem>
               </PaginationContent>

@@ -104,12 +104,7 @@ export const projects = [
     description:
       'Developed a fully responsive car information website using Next.js. CarHub allows users to search and explore car specifications by make, model, or year, offering a sleek and intuitive UI. Key features include real-time search, detailed specs like MPG and engine type, and mobile-first responsive design.',
     image: '/projects/carhub.png',
-    tags: [
-      'Next.js',
-      'JavaScript',
-      'Tailwind CSS',
-      'Rapid API',
-    ],
+    tags: ['Next.js', 'JavaScript', 'Tailwind CSS', 'Rapid API'],
     demoUrl: 'https://carshub-ruddy.vercel.app/',
     githubUrl: 'https://github.com/AhmeWagih/carshub',
     category: 'Frontend',
@@ -120,7 +115,7 @@ export const projects = [
     description:
       'Developed an AI-powered article summarizer using React and Vite, which extracts concise summaries from article URLs. The tool features a responsive UI with Tailwind CSS and delivers quick, accurate results.',
     image: '/projects/ai-sum.png',
-    tags: ['React.js', 'JavaScript', 'Tailwind CSS', 'Rapid API'],
+    tags: ['React.js', 'Vite', 'JavaScript', 'Tailwind CSS', 'Rapid API'],
     demoUrl: 'https://article-summarizer-liart-eight.vercel.app/',
     githubUrl: 'https://github.com/AhmeWagih/article_summarizer',
     category: 'Frontend',
