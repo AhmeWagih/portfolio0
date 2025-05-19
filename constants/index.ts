@@ -1,4 +1,3 @@
-
 export const words = ['Front_End Developer'];
 
 export const navItems = [
@@ -51,15 +50,10 @@ export const projects = [
     id: 1,
     title: 'IdeaFlow',
     description:
-      "IdeaFlow is a mindmap generator that allows users to create and share mindmaps online.",
+      'IdeaFlow is a mindmap generator that allows users to create and share mindmaps online.',
     image: '/projects/ideaflow.png',
-    tags: [
-      'Next.js',
-      'TypeScript',
-      'Tailwind CSS',
-      'Generative AI',
-    ],
-    demoUrl: 'https://nasa-space-app-mauve.vercel.app',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Generative AI'],
+    demoUrl: 'https://ideaflow-client.vercel.app/',
     githubUrl: 'https://github.com/AhmeWagih/ideaflow',
     category: 'Frontend',
   },
@@ -88,20 +82,36 @@ export const projects = [
     description:
       ' Developed a YouTube clone application using React and Tailwind CSS, integrating it with YouTube’s API to fetch and display videos, enabling users to search and watch videos seamlessly.',
     image: '/projects/youtubeclone.png',
-    tags: ['React.js','JavaScript', 'Tailwind CSS', 'Rapid API'],
+    tags: ['React.js', 'JavaScript', 'Tailwind CSS', 'Rapid API'],
     demoUrl: 'https://youtube-clone-eight-nu.vercel.app/',
     githubUrl: 'https://github.com/AhmeWagih/youtube-clone',
     category: 'Frontend',
   },
+  // {
+  //   id: 4,
+  //   title: 'Portfolio Website',
+  //   description:
+  //     'A sleek, responsive portfolio website showcasing projects and skills.',
+  //   image: '/projects/portfolio.png',
+  //   tags: ['Next.js','TypeScript', 'Tailwind CSS', 'Framer Motion'],
+  //   demoUrl: 'https://ahmed-wagih-one.vercel.app/',
+  //   githubUrl: 'https://github.com/AhmeWagih/my_portfolio',
+  //   category: 'Frontend',
+  // },
   {
     id: 4,
-    title: 'Portfolio Website',
+    title: 'CarHub',
     description:
-      'A sleek, responsive portfolio website showcasing projects and skills.',
-    image: '/projects/portfolio.png',
-    tags: ['Next.js','TypeScript', 'Tailwind CSS', 'Framer Motion'],
-    demoUrl: 'https://ahmed-wagih-one.vercel.app/',
-    githubUrl: 'https://github.com/AhmeWagih/my_portfolio',
+      'Developed a fully responsive car information website using Next.js. CarHub allows users to search and explore car specifications by make, model, or year, offering a sleek and intuitive UI. Key features include real-time search, detailed specs like MPG and engine type, and mobile-first responsive design.',
+    image: '/projects/carhub.png',
+    tags: [
+      'Next.js',
+      'JavaScript',
+      'Tailwind CSS',
+      'Rapid API',
+    ],
+    demoUrl: 'https://carshub-ruddy.vercel.app/',
+    githubUrl: 'https://github.com/AhmeWagih/carshub',
     category: 'Frontend',
   },
   {
@@ -110,8 +120,8 @@ export const projects = [
     description:
       'Developed an AI-powered article summarizer using React and Vite, which extracts concise summaries from article URLs. The tool features a responsive UI with Tailwind CSS and delivers quick, accurate results.',
     image: '/projects/ai-sum.png',
-    tags: ['React.js','JavaScript', 'Tailwind CSS', 'Rapid API'],
-    demoUrl: '',
+    tags: ['React.js', 'JavaScript', 'Tailwind CSS', 'Rapid API'],
+    demoUrl: 'https://article-summarizer-liart-eight.vercel.app/',
     githubUrl: 'https://github.com/AhmeWagih/article_summarizer',
     category: 'Frontend',
   },
@@ -121,8 +131,15 @@ export const projects = [
     description:
       'Built a modern prompt-sharing platform using Next.js and MongoDB featuring glassmorphism-inspired design. Users can create, edit, and delete prompts, explore community profiles, search by tags, and copy prompts to the clipboard. The platform is fully responsive, with a smooth user experience across all devices.',
     image: '/projects/posts.png',
-    tags: ['Next.js','JavaScript', 'NextAuth.js', 'MongoDB', 'Tailwind CSS', 'Rapid API'],
-    demoUrl: '',
+    tags: [
+      'Next.js',
+      'JavaScript',
+      'NextAuth.js',
+      'MongoDB',
+      'Tailwind CSS',
+      'Rapid API',
+    ],
+    demoUrl: 'https://promptopia-rouge-kappa.vercel.app/',
     githubUrl: 'https://github.com/AhmeWagih/promptopia',
     category: 'Full Stack',
   },
@@ -133,7 +150,7 @@ export const projects = [
     image: '/projects/nike.png',
     demoUrl: 'https://app-landing-page-using-tailwind.vercel.app/',
     githubUrl: 'https://github.com/AhmeWagih/AppLandingPage_UsingTailwind',
-    tags: ['React.js','JavaScript', 'Tailwind CSS'],
+    tags: ['React.js', 'JavaScript', 'Tailwind CSS'],
     category: 'Frontend',
   },
   {
@@ -144,7 +161,7 @@ export const projects = [
     image: '/projects/movieapp.png',
     demoUrl: 'https://movie-app-one-peach.vercel.app/',
     githubUrl: 'https://github.com/AhmeWagih/movie-app',
-    tags: ['React.js','JavaScript' , 'Tailwind CSS'],
+    tags: ['React.js', 'JavaScript', 'Tailwind CSS'],
     category: 'Frontend',
   },
   {
@@ -155,7 +172,7 @@ export const projects = [
     image: '/projects/ecommerce.png',
     demoUrl: 'https://e-commerce-app-inky-gamma.vercel.app/',
     githubUrl: 'https://github.com/AhmeWagih/e-commerce-js',
-    tags: ['React.js','JavaScript','Redux.js', 'Bootstrap'],
+    tags: ['React.js', 'JavaScript', 'Redux.js', 'Bootstrap'],
     category: 'Frontend',
   },
   {
@@ -166,7 +183,7 @@ export const projects = [
     image: '/projects/ecom-ts.png',
     demoUrl: '',
     githubUrl: 'https://github.com/AhmeWagih/e-commerce-ts',
-    tags: ['React.js','TypeScript', 'Redux.js', 'Json Server', 'Bootstrap'],
+    tags: ['React.js', 'TypeScript', 'Redux.js', 'Json Server', 'Bootstrap'],
     category: 'Frontend',
   },
 ];

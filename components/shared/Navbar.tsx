@@ -9,13 +9,11 @@ import { motion } from 'framer-motion';
 import { ModeToggle } from '../providers/theme-toggle';
 import { navItems } from '@/constants';
 import Image from 'next/image';
-import { useMediaQuery } from 'react-responsive';
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [scrolled, setScrolled] = useState(false);
-  const isMobile = useMediaQuery({ maxWidth: 768 });
-
   useEffect(() => {
     const handleScroll = () => {
       // Set navbar background when scrolled
@@ -75,16 +73,12 @@ export default function Navbar() {
                 href="/"
                 className="font-bold text-2xl text-primary hover:text-primary/80 transition"
               >
-                {isMobile ? (
-                  <Image
-                    src="/mobileLogo.png"
-                    alt="Mobile Logo"
-                    width={50}
-                    height={40}
-                  />
-                ) : (
-                  <Image src="/logo.png" alt="Logo" width={200} height={64} />
-                )}
+                <Image
+                  src="/MobileLogo.png"
+                  alt="Logo"
+                  width={80}
+                  height={40}
+                />
               </Link>
             </div>
 
@@ -128,12 +122,12 @@ export default function Navbar() {
             {/* Mobile Navigation Button */}
             <div className="md:hidden flex items-center gap-1">
               <ModeToggle />
-              <Button variant="secondary" className='rounded-lg bg-primary/5 p-2 hover:bg-primary/10 dark:bg-primary/40 dark:hover:bg-primary/30' onClick={() => setIsOpen(!isOpen)}>
-                {isOpen ? (
-                  <X size={20} />
-                ) : (
-                  <Menu size={20} />
-                )}
+              <Button
+                variant="secondary"
+                className="rounded-lg bg-primary/5 p-2 hover:bg-primary/10 dark:bg-primary/40 dark:hover:bg-primary/30"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                {isOpen ? <X size={20} /> : <Menu size={20} />}
               </Button>
             </div>
           </div>
