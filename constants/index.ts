@@ -137,7 +137,7 @@ export const projects = [
       'NextAuth.js',
       'MongoDB',
       'Tailwind CSS',
-      'Rapid API',
+      'shadcn/ui',
     ],
     demoUrl: 'https://promptopia-rouge-kappa.vercel.app/',
     githubUrl: 'https://github.com/AhmeWagih/promptopia',
