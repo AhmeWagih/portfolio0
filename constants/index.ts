@@ -1,9 +1,12 @@
+import { Code2, Trophy } from "lucide-react";
+
 export const words = ['Front_End Developer'];
 
 export const navItems = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
+  { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
   { name: 'Contact', href: '#contact' },
 ];
@@ -180,5 +183,146 @@ export const projects = [
     githubUrl: 'https://github.com/AhmeWagih/e-commerce-ts',
     tags: ['React.js', 'TypeScript', 'Redux.js', 'Json Server', 'Bootstrap'],
     category: 'Frontend',
+  },
+];
+
+interface Experience {
+  title: string
+  company: string
+  logo: string
+  location: string
+  duration: string
+  type: "current" | "past"
+  achievements: string[]
+  skills: string[]
+  metrics?: {
+    icon: string
+    label: string
+    value: string
+  }[]
+}
+
+export const experiences: Experience[] = [
+  {
+    title: "Frontend Developer",
+    company: "KimCam",
+    logo: "/experience/kimkam.svg",
+    location: "Zagazig, Sharkia, Egypt • Remote",
+    duration: "Jul 2025 - Sep 2025",
+    type: "past",
+    achievements: [
+      "Developed and optimized the Teacher Dashboard (https://kimcamacademy.com)) to streamline educational content management and enhance user experience",
+      "Designed and implemented features for course and content management",
+      "Built tools for student tracking and performance monitoring",
+      "Developed functionality for video uploads and creating an educational media library",
+      "Managed account settings and teacher controls for better usability",
+      "Ensured a scalable and responsive UI to support both teachers and learners",
+      "Contributed to delivering a modern, user-friendly platform for educational content delivery and teacher-student interaction",
+    ],
+    skills: ["React", "Vite", "JavaScript", "Redux.js", "Bunny.net", "Tailwind CSS", "shadcn/ui"],
+    metrics: [
+      { icon: "Users", label: "Duration", value: "3 mos" },
+      { icon: "TrendingUp", label: "Type", value: "Full-time" },
+    ],
+  },
+  {
+    title: "Frontend Developer",
+    company: "Qumra",
+    logo: "/experience/qumra.png",
+    location: "Alexandria, Egypt • Remote",
+    duration: "Dec 2024 - Jun 2025",
+    type: "past",
+    achievements: [
+      "Developed the company's main landing page (https://qumra-dev.site)), boosting user engagement by 40%",
+      "Built complex dashboards (https://app.qumra-dev.site)) with interactive components and data visualizations",
+      "Created themeable UI kits with 'qumra-ui' and Nunjucks for scalable client branding",
+      "Boosted performance by 35% through lazy loading and memoization",
+      "Reduced bundle size by 28% via code splitting, image optimization, and dependency cleanup",
+    ],
+    skills: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Nunjucks", "GraphQL"],
+    metrics: [
+      // { icon: "TrendingUp", label: "Engagement", value: "+40%" },
+      // { icon: "Award", label: "Performance", value: "+35%" },
+      { icon: "Users", label: "Duration", value: "6 mos" },
+      { icon: "TrendingUp", label: "Type", value: "Part-time" },
+    ],
+  },
+  {
+    title: "React Web Developer",
+    company: "Digital Egypt Pioneers Initiative - DEPI",
+    logo: "/experience/depi.jpg",
+    location: "Zagazig, Sharkia, Egypt • Hybrid",
+    duration: "May 2024 - Nov 2024",
+    type: "past",
+    achievements: [
+      "Completed a 6-month internship focused on practical React development",
+      "Collaborated on real-world web applications in a fast-paced, team-oriented environment",
+      "Improved understanding of front-end architecture and scalable state management",
+      "Gained hands-on experience with modern React patterns and best practices",
+    ],
+    skills: [
+      "React",
+      "JavaScript",
+      "Redux.js",
+      "Bootstrap",
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Docker",
+      "Next.js",
+      "Postman"
+    ],
+    metrics: [
+      { icon: "Calendar", label: "Duration", value: "6 mos" },
+      { icon: "Users", label: "Type", value: "Internship" },
+    ],
+  },
+]
+
+export const achievements = [
+  {
+    title: 'NASA Space Apps Cairo',
+    subtitle: 'Certificate',
+    link: 'https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/skybound',
+    grade: 'Global Nominee',
+    date: 'October 2024',
+    organization: 'Innovation University',
+    icon: Trophy,
+    accomplishments: [
+      'Secured a place in the top 10 among 500+ competing teams by developing an interactive platform that achieved 95% positive user feedback.',
+      'Created a solution that earned recognition from NASA judges for innovative use of satellite data integration.',
+      'Developed a web platform that reduced environmental education complexity by 40%, making climate science accessible to non-technical users.',
+    ],
+    color:
+      'bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20',
+    iconColor: 'text-blue-600 dark:text-blue-400',
+  },
+];
+
+export const activities = [
+  {
+    title: 'Competitive Programmer',
+    platform: 'Codeforces',
+    category: 'Problem Solving',
+    status: 'Present',
+    icon: Code2,
+    achievements: [
+      'Solved 200+ algorithmic problems on Codeforces, mastered 5 core data structure implementations and 12 different algorithmic techniques including dynamic programming, graph algorithms, and greedy approaches.',
+      'Participated in 10+ competitive programming contests, consistently ranking in the top 35% of participants.',
+    ],
+    skills: [
+      'Dynamic Programming',
+      'Graph Algorithms',
+      'Greedy Approaches',
+      'Data Structures',
+    ],
+    stats: [
+      { label: 'Problems Solved', value: '200+' },
+      { label: 'Contest Participation', value: '10+' },
+      { label: 'Top Ranking', value: '35%' },
+    ],
   },
 ];

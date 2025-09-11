@@ -23,7 +23,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col items-center md:items-start">
             <Link
-              href="#home"
+              href="/"
               className="font-bold text-2xl text-primary hover:text-primary/80 transition"
             >
               {isMobile ? (

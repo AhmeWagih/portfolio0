@@ -70,7 +70,7 @@ export default function About() {
             <div className="pt-4 flex flex-wrap gap-4">
               <Button asChild>
                 <a 
-                  href="/AhmedWagih.pdf" 
+                  href="/AhmedWagih02.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
