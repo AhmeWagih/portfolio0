@@ -1,6 +1,6 @@
 import { Code2, Trophy } from "lucide-react";
 
-export const words = ['Front_End Developer'];
+export const words = ['Full Stack Developer'];
 
 export const navItems = [
   { name: 'Home', href: '#home' },
