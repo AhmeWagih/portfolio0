@@ -211,7 +211,7 @@ export const experiences: Experience[] = [
     duration: "Jul 2025 - Sep 2025",
     type: "past",
     achievements: [
-      "Developed and optimized the Teacher Dashboard (https://kimcamacademy.com)) to streamline educational content management and enhance user experience",
+      "Developed and optimized the Teacher Dashboard to streamline educational content management and enhance user experience",
       "Designed and implemented features for course and content management",
       "Built tools for student tracking and performance monitoring",
       "Developed functionality for video uploads and creating an educational media library",
@@ -233,8 +233,8 @@ export const experiences: Experience[] = [
     duration: "Dec 2024 - Jun 2025",
     type: "past",
     achievements: [
-      "Developed the company's main landing page (https://qumra-dev.site)), boosting user engagement by 40%",
-      "Built complex dashboards (https://app.qumra-dev.site)) with interactive components and data visualizations",
+      "Developed the company's main landing page, boosting user engagement by 40%",
+      "Built complex dashboards with interactive components and data visualizations",
       "Created themeable UI kits with 'qumra-ui' and Nunjucks for scalable client branding",
       "Boosted performance by 35% through lazy loading and memoization",
       "Reduced bundle size by 28% via code splitting, image optimization, and dependency cleanup",
