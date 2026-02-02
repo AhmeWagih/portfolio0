@@ -28,7 +28,7 @@ export const skills = {
     'shadcn/ui',
     'Framer Motion',
   ],
-  Backend: ['Node.js', 'Express', 'Python', 'GraphQL', 'REST API', 'MongoDB'],
+  Backend: ['Node.js', 'Express', 'Python','Puter.js', 'GraphQL', 'REST API', 'MongoDB'],
   'Tools & Others': [
     'Git',
     'GitHub',
@@ -90,17 +90,6 @@ export const projects = [
     githubUrl: 'https://github.com/AhmeWagih/youtube-clone',
     category: 'Frontend',
   },
-  // {
-  //   id: 4,
-  //   title: 'Portfolio Website',
-  //   description:
-  //     'A sleek, responsive portfolio website showcasing projects and skills.',
-  //   image: '/projects/portfolio.png',
-  //   tags: ['Next.js','TypeScript', 'Tailwind CSS', 'Framer Motion'],
-  //   demoUrl: 'https://ahmed-wagih-one.vercel.app/',
-  //   githubUrl: 'https://github.com/AhmeWagih/my_portfolio',
-  //   category: 'Frontend',
-  // },
   {
     id: 4,
     title: 'CarHub',
@@ -184,6 +173,17 @@ export const projects = [
     tags: ['React.js', 'TypeScript', 'Redux.js', 'Json Server', 'Bootstrap'],
     category: 'Frontend',
   },
+  {
+    id: 11,
+    title: 'Resume Analyzer',
+    description:
+      'An AI-powered resume analyzer that evaluates resumes and provides feedback for improvement. Built with React, TypeScript, Tailwind CSS, and Puter.js, it leverages Claude-4.5 to deliver insightful analysis and suggestions to enhance resume quality.',
+    image: '/projects/resume.png',
+    demoUrl: 'https://wego-resume-analyzer-tmw3k.puter.site/',
+    githubUrl: 'https://github.com/AhmeWagih/resume-analyzer',
+    tags: ['React.js', 'TypeScript', 'Tailwind CSS','Puter.js','claude-4.5'],
+    category: 'Full Stack',
+  }
 ];
 
 interface Experience {
