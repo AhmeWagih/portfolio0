@@ -10,6 +10,17 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Ahmed Wagih | Software Developer',
   description: 'Software developer and designer showcasing projects and skills',
+  keywords: [
+    'Ahmed Wagih',
+    'Software Developer',
+    'Frontend Developer',
+    'Backend Developer',
+    'Full Stack Developer',
+    'Web Developer',
+    'Portfolio',
+    'ahmedwagih.dev',
+    'ahmedwagih.vercel.app',
+  ],
   openGraph: {
     type: 'website',
     locale: 'en_US',
